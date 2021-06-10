@@ -76,8 +76,7 @@ print ("---------")
         print("Как дела? ")
     except KeyboardInterrupt:
         print("Пока!")
-        
-while True:
+        while True:Yt
     answer = input("Как дела? ")
     print("Как дела?")
 
@@ -100,3 +99,5 @@ def discounted(price, discount, max_discount = 30):
         print("Не корректные данные")
 
 print(discounted(100,'десять'))
+
+print(discounted(100,10))
