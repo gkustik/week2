@@ -10,13 +10,11 @@ def advice(age):
         return ('Учитесь в ВУЗе')
     else:
         return ('Вам пора работать')
-age = int(input('Сколько вам лет: '))
-
-#print(advice(18))
-#print(advice(10))
-#print(advice(6))
-#print(advice(0))
-#print(advice(55))
+print(advice(18))
+print(advice(10))
+print(advice(6))
+print(advice(0))
+print(advice(55))
 
 # Задание №2 (оператор IF)
 
@@ -39,14 +37,12 @@ print(compare("домик","дом"))
 
 # Задание №1 (оператор while)
 
-def hello_user(answer):
-    answer = input("Как дела? ")
-while True:
-    answer = input("Как дела? ")
-    if answer == 'Хорошо':
-        break
-    else:
-        print("Как дела?")
+def hello_user():
+    while True:
+        answer = input("Как дела? ")
+        if answer == 'Хорошо':
+            break
+hello_user()
 
 # Задание №2 (оператор while)
 
@@ -70,15 +66,16 @@ print ("---------")
 
  # Исключения задание №1
  
- def hello_user(answer):
+def hello_user():
     try:
-        answer = input("Как дела? ")
-        print("Как дела? ")
+        while True:
+            answer = input("Как дела? ")
+            if answer == 'Хорошо':
+                break
     except KeyboardInterrupt:
-        print("Пока!")
-        while True:Yt
-    answer = input("Как дела? ")
-    print("Как дела?")
+        print("\nПока!")
+        
+hello_user()
 
 # Исключения задание №2
 
@@ -97,7 +94,7 @@ def discounted(price, discount, max_discount = 30):
             return price_with_discount
     except (ValueError, TypeError):
         print("Не корректные данные")
+        return " "
 
 print(discounted(100,'десять'))
-
 print(discounted(100,10))
