@@ -2,7 +2,7 @@
 def advice(age):
     if age <= 0:
         return ("Вы в процессе") 
-    elif 0 < age <= 6:
+    elif age <= 6:
         return('Ходите с дет. сад')
     elif 7 <= age <= 17:
         return('Учитесь в школе')
@@ -24,7 +24,7 @@ def compare(a, b):
             return('1')
         elif a != b and len(a) > len(b):
             return('2')
-        elif a != b and "learn" in b:
+        elif "learn" in b:
             return('3')
     else:
         return("0")
@@ -46,21 +46,19 @@ hello_user()
 
 # Задание №2 (оператор while)
 
-qa = [
-    {"question": 'Как дела?', "answer": 'Позитив'},
-    {'question': "Как зовут?", 'answer': "Питон"}
-]
+qa = {
+    "Как дела?": "Позитив",
+    "Как зовут?": "Питон",
+    "Что делаешь?": "Отдыхаю"
+    }
 
 while True:
     ask_user = input("Что тебя интересует? ")
-    if ask_user == qa[0]["question"]:
-        print(qa[0]["answer"])
-        break
-    if ask_user == qa[1]["question"]:
-        print(qa[1]["answer"])
+    if ask_user in qa.keys():
+        print(qa.get(ask_user))
         break
     else:
-         print("Что тебя интересует? ")
+        print ('Давай попробуем еще раз =)')
 
 print ("---------")
 
